@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cta %}
+
+<div class="container hero">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                <h1>Exceptional Medical Care for your child.</h1>
+                <p> At our Medical Center
+                    we combine world class medicine
+                    with compassionate care from Dr. Arif Morshed  </p>      
+                    {% if request.session.email %}
+                    <a href="appointment"class="btn btn-light btn-lg action-button" type="button">Book an appointment</a>
+                    {% else %}
+                    <div>
+                      <p class="text-warning"> For appointment, login First </p>
+                      <a href="signup" class="badge badge-danger">Login</a>
+                    </div>                   
+                    {% endif %}
+            </div>
+            <div>
+              <p><br>MBBS, MPH(DU), FCPS(Child Health), MD(Neonatology)<br>
+                Sir Salimullah Medical College & Mitford Hospital, Dhaka.<br>
+                Chamber 1: Monowara Hospital (Pvt.) ...<br>
+                54, Siddeshwari Road, Dhaka-1217.<br>
+                Visiting Hours: Everyday (4.00pm - 8.00pm), Friday (9.00am - 10.30am)<br>
+                For emergency contact: 02-48318135, 01777-657574<br></p>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock cta %}
+
+{% block content %}
+<section class="container py-5"  style="margin-block:200px;" id="team">
+    <div class="row text-center ">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">Our Team</h1>
+            <p class="lead">Rely on qualified and competent Doctor for your Baby.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'img/team1.jpg' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Dr Arif Morshed</h5>
+                    <span class="small text-uppercase text-muted">Consultant paediactri nephrology</span>
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'img/team2.jpg' %}" alt="" class=" mh-100 rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Dr Mim Ahmed </h5>
+                    <span class="small text-uppercase text-muted">Consultant Consultant paediactri neurology</span>
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'img/team3.jpg' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Dr Sarra</h5>
+                    <span class="small text-uppercase text-muted">Consultant paediactri endocrinologist</span>
+                </div>
+            </div><!-- End -->
+
+            <!-- Team item -->
+            <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'img/team4.png' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">DR Fahad</h5>
+                    <span class="small text-uppercase text-muted">Consultant paediactri</span>
+                </div>
+            </div><!-- End -->
+        </div>
+    </div>
+</section><!-- End -->
+
+
+
+<section id="services">
+  <div class="bg-primary text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="fw-light text-white">Services</h1>
+        <p class="overview">We provide compassionate and expert care to our community. You are at the center of everything we do. Let us be your healthcare partner.</p>
+      </div>
+    </div>
+  <div class="container">
+    <div class="row">
+      <!-- Team Member 1 -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow">
+          <img src="{% static 'img/service1.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-0">Primary Care</h5>
+            <div class="card-text text-black-50">Your childs personalized medical professionals.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow">
+          <img src="{% static 'img/service2.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-0">Dermatology</h5>
+            <div class="card-text text-black-50">Your baby's skin care made easier </div>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow">
+          <img src="{% static 'img/service3.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-0">Nanny service</h5>
+            <div class="card-text text-black-50">Helps out you taking care of your kids</div>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow">
+          <img src="{% static 'img/service4.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-0">Therapy</h5>
+            <div class="card-text text-black-50">We also have Theray section in our own hospital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  
+  </div>
+</section>
+
+<section class="text-center conatiner" style="margin-block:200px;" id="reviews">
+    <h2>Review from Patients and the parents</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">		
+            <div class="carousel-item active">
+                <div class="img-box"><img src="{% static 'img/patient1.jpg' %}" alt=""></div>
+                <p class="testimonial">It was a great experience with your website. Its super easy to book a appointment of a doctor for my kid</p>
+                <p class="overview">Md Junayed Ahmed</p>
+            </div>
+           		
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock content %}
